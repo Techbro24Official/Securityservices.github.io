@@ -19,8 +19,8 @@ a {
 /* WhatsApp Icon Styles */
 .whatsapp-icon {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 100px;
+    right: 10px;
     background-color: #343434;
     color: white;
     font-size: 24px;
@@ -135,6 +135,7 @@ li a:hover {
     color: #168bae !important;
     border-radius: 35px;
 }
+
 
 .service {
     left: 734px;
@@ -844,7 +845,7 @@ textarea {
 .meeting-btn {
     position: relative;
     background: linear-gradient(45deg, #242424, #363636);
-    color: #000000 !important;
+    color: #fffdfd !important;
     z-index: 1;
     border: none !important;
     border-radius: 5px;
@@ -854,7 +855,6 @@ textarea {
 
 .button-schedule-meeting {
     padding: 8px 14px;
-    color: #000 !important;
     background: none;
     border: none;
 }
