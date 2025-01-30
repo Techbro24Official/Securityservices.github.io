@@ -26,6 +26,7 @@
         position: fixed;
         font-size: 35px;
         z-index: 1001;
+        color: #fff;
         margin-right: 280px;
         margin-top: 24px;
     }
@@ -33,7 +34,7 @@
 
 
     .navbar-toggle:hover {
-        color: #fff;
+        color: #cfcfcf;
     }
 
     .navbar-items.show {
@@ -68,7 +69,7 @@
 
     .btn button {
         position: absolute;
-        margin-top: -100px;
+        margin-top: -131px;
         margin-left: 64px;
     }
 }

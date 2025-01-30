@@ -15,6 +15,9 @@ a {
     color: #000;
 }
 
+.fa {
+    margin-left: 5px;
+}
 
 /* WhatsApp Icon Styles */
 .whatsapp-icon {
@@ -43,11 +46,11 @@ a {
 
 .navbar {
     position: fixed;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(36 36 36);
     top: -10px;
     left: 0;
     width: 100%;
-    height: 115px;
+    height: 117px;
     z-index: 1000;
     padding: 10px 0;
 }
@@ -60,15 +63,14 @@ a {
 .logo {
     width: 182px;
     height: 160.61px;
-    /* background-color: #000; */
-    margin-top: -34px;
+  
 
 }
 
 .logo img {
     object-fit: contain;
     width: 100%;
-    height: 100%;
+    height: 66%;
 }
 
 .navbar-items {
@@ -97,9 +99,12 @@ a {
     margin: 0;
 }
 
+li {
+    color: #fff;
+}
 li a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     transition: color 0.3s ease;
 }
 
@@ -113,7 +118,7 @@ li a:hover {
     padding: 7px 27px 15px 27px;
     margin: 0;
     position: absolute;
-    top: 69%;
+    top: 83%;
     width: 200px;
     left: 550px;
     display: none;
@@ -158,9 +163,9 @@ li a:hover {
 .btn button {
     padding: 10px 20px;
     border-radius: 35px;
-    color: white;
+    color: #000000;
     border: none;
-    background: #000;
+    background: #ffffff;
 }
 
 
