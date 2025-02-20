@@ -46,7 +46,7 @@ a {
 
 .navbar {
     position: fixed;
-    background-color: rgb(36 36 36);
+    background-color: rgb(34 35 39);
     top: -10px;
     left: 0;
     width: 100%;
@@ -115,7 +115,7 @@ li a:hover {
 /* Dropdown Styling */
 .dropdown {
     list-style: none;
-    padding: 7px 27px 15px 27px;
+    padding: 31px 27px 15px 27px;
     margin: 0;
     position: absolute;
     top: 83%;
@@ -123,7 +123,7 @@ li a:hover {
     left: 550px;
     display: none;
     text-align: center;
-    background: #fff;
+    background-color: rgb(34 35 39);
     z-index: 9;
     transition: 0.2s;
     border-radius: 3px;
@@ -131,13 +131,13 @@ li a:hover {
 }
 
 .dropdown li a {
-    color: #5e8e45;
+    color: #fff;
     font-size: 13px;
 }
 
 .dropdown li a:hover {
     background-color: rgba(211, 211, 211, 0.733);
-    color: #168bae !important;
+    color: #000 !important;
     border-radius: 35px;
 }
 
@@ -419,9 +419,11 @@ button:hover {
 }
 
 .about-us h6 {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 600;
     font-family: math;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .container-cards {
@@ -599,10 +601,13 @@ button:hover {
 .vip-security h3 {
     font-weight: 600;
     font-family: sans-serif;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .vip-security p {
-    font-size: 19px;
+    font-size: 22px;
     line-height: 1.5;
     padding: 0 20px 0px 0px;
 }
@@ -623,16 +628,18 @@ button:hover {
 
 .bouncer h3 {
     font-weight: 600;
+    font-size: 36px;
     font-family: fangsong;
+    margin-bottom: 20px;
 }
 
 .bouncer p {
-    font-size: 18px;
+    font-size: 18.9px;
     margin-top: 10px;
 }
 
 .bouncer .para {
-    padding: 40px;
+    padding: 0 40px;
 }
 
 
@@ -671,9 +678,18 @@ h1 {
 }
 
 p {
-    font-size: 1em;
-    line-height: 1.6;
+    font-size: 18.9px;
+    line-height: 1.4;
     margin: 10px 0;
+}
+@media (min-width:1600px) {
+    p, .bouncer p {
+        font-size: 23px;
+    }
+    
+.vip-security p {
+    font-size: 26px;
+}
 }
 
 .sidebar h2 {
@@ -940,7 +956,10 @@ textarea {
 
 
 
-
+.footer {
+    width: 20%;
+    padding: 46px;
+}
 
 
 
@@ -951,6 +970,7 @@ textarea {
     width: 100%;
     margin-top: 150px;
     border-top: 1px solid;
+    background: #004aff08;
 }
 
 .footers {
@@ -1010,6 +1030,7 @@ textarea {
     padding: 30px 0;
     margin-top: 35px;
     text-align: center;
+    background: #004aff08;
 }
 
 .Footer-span {
@@ -1021,8 +1042,9 @@ textarea {
 }
 
 .footer-end a {
-    color: #ff0202;
+    color: #135993;
     text-decoration: none;
+    font-weight: 600;
 }
 
 
@@ -1034,7 +1056,10 @@ textarea {
     margin-top: 100px;
     justify-content: center;
     gap: 57px;
-    background: rgb(31, 31, 31);
+    background: url(IMG/32947939_491362538070.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 40px;
     color: #e7e7e7;
 }
@@ -1081,12 +1106,14 @@ textarea {
 
 .clean p {
     padding: 0 27px 0 0;
-    font-size: 18px;
+    font-size: 25px;
+    line-height: 1.4;
 }
 
 .clean h4 {
-    font-size: 31px;
+    font-size: 50px;
     font-family: fangsong;
+    font-weight: 600;
 }
 
 .heading {
