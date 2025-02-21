@@ -3,10 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    overflow-x: hidden;
+    transition: padding-top 0.3s ease-in-out;
 }
 
-.container {
+html, body {
     overflow-x: hidden;
 }
 
@@ -24,46 +24,57 @@ a {
     position: fixed;
     bottom: 100px;
     right: 10px;
-    background-color: #343434;
-    color: white;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
+    background-color: #25d366;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 1px 2px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    text-decoration: none;
-    transition: transform 0.2s ease-in-out;
+    padding: 10px;
+    animation: shake .3s ease-in-out infinite;
 }
 
-.whatsapp-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
 }
+
 
 .navbar {
-    position: fixed;
-    background-color: rgb(34 35 39);
-    top: -10px;
-    left: 0;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 117px;
-    z-index: 1000;
-    padding: 10px 0;
+    background-color: rgb(34, 35, 39);
+    width: 100%;
+    padding: 15px 20px;
+
 }
 
-.navbar-toggle {
-    display: none;
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(34, 35, 39);
+    z-index: 1000;
+    box-shadow: 1px 5px 8px rgb(0 0 0 / 65%);
+    transition: top 0.3s ease-in-out;
 }
+
 
 
 .logo {
     width: 182px;
     height: 160.61px;
-  
+    padding: 0px 0 20px 0;
 
 }
 
@@ -73,99 +84,66 @@ a {
     height: 66%;
 }
 
-.navbar-items {
-    display: flex;
-    align-items: baseline;
-}
-
-/* Slide animation for navbar-items */
-.navbar-items {
-    left: -100%;
-    /* Initially hidden */
-    transition: left 0.3s ease-in-out;
-    /* Smooth slide effect */
-}
-
-/* When the navbar is visible */
-.navbar-items.show {
-    left: 0;
-}
-
-
-.list-items {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
-    margin: 0;
+    padding: 0 30px 0 0;
+    margin-bottom: 47px;
 }
 
-li {
-    color: #fff;
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
 }
-li a {
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a {
+    color: white;
     text-decoration: none;
-    color: #ffffff;
-    transition: color 0.3s ease;
+    font-size: 18px;
+    padding: 8px 12px;
+    display: block;
 }
 
-li a:hover {
-    color: #da0026;
-}
-
-/* Dropdown Styling */
-.dropdown {
-    list-style: none;
-    padding: 31px 27px 15px 27px;
-    margin: 0;
-    position: absolute;
-    top: 83%;
-    width: 200px;
-    left: 550px;
+.dropdown-menu {
     display: none;
-    text-align: center;
-    background-color: rgb(34 35 39);
-    z-index: 9;
-    transition: 0.2s;
-    border-radius: 3px;
-    box-shadow: 0px 15px 20px rgb(0 0 0 / 7%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    width: 300px;
 }
 
-.dropdown li a {
-    color: #fff;
-    font-size: 13px;
+.dropdown-menu li {
+    width: 100%;
 }
 
-.dropdown li a:hover {
-    background-color: rgba(211, 211, 211, 0.733);
-    color: #000 !important;
-    border-radius: 35px;
-}
-
-
-.service {
-    left: 734px;
-}
-
-.dropdown a {
-    display: block;
-    padding: 2px;
-}
-
-.dropdown a:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.list-items li:hover>.dropdown {
+.dropdown-menu a {
+    color: black;
+    padding: 5px;
     display: block;
 }
 
-.btn button {
-    padding: 10px 20px;
-    border-radius: 35px;
-    color: #000000;
-    border: none;
-    background: #ffffff;
+.nav-links li:hover .dropdown-menu {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
 }
 
 
@@ -174,7 +152,7 @@ li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 60px;
     gap: 16px;
 }
 
@@ -196,7 +174,7 @@ li a:hover {
     height: 695px;
     width: 100%;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 0;
 }
 
 .slides {
@@ -402,7 +380,7 @@ button:hover {
 .about-us {
     display: flex;
     gap: 25px;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .about-us img {
@@ -419,11 +397,17 @@ button:hover {
 }
 
 .about-us h6 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     font-family: math;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.about-us p {
+    font-size: 18.9px;
+    line-height: 1.4;
+    margin: 10px 0;
 }
 
 .container-cards {
@@ -445,12 +429,20 @@ button:hover {
 }
 
 .card:hover {
-    background: linear-gradient(45deg, #00000086, #000000c4);
+    background: rgb(34, 35, 39);
+    /* Card ka background change */
+}
+
+.card:hover h2,
+.card:hover p {
+    color: #fff;
+    /* h1 aur p ka text color change */
 }
 
 .card img {
     width: 50px;
     height: 50px;
+    margin: auto;
 }
 
 .card h2 {
@@ -562,12 +554,18 @@ button:hover {
 }
 
 .content .box:hover {
-    background: linear-gradient(45deg, #00000086, #000000c4);
+    background: rgb(34, 35, 39);
+}
+
+.content .box:hover h3,
+.content .box:hover p {
+    color: #fff;
 }
 
 .content .box img {
     width: 50px;
     height: 50px;
+    margin: auto;
 }
 
 .content .box h3 {
@@ -650,7 +648,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     margin-top: 70px;
-    max-width: 1200px;
+    max-width: 1500px;
     width: 100%;
     padding: 20px;
 }
@@ -677,19 +675,18 @@ h1 {
     margin: 10px 0;
 }
 
-p {
-    font-size: 18.9px;
-    line-height: 1.4;
-    margin: 10px 0;
-}
+
+
 @media (min-width:1600px) {
-    p, .bouncer p {
+
+    p,
+    .bouncer p {
         font-size: 23px;
     }
-    
-.vip-security p {
-    font-size: 26px;
-}
+
+    .vip-security p {
+        font-size: 26px;
+    }
 }
 
 .sidebar h2 {
@@ -753,7 +750,7 @@ p {
 
 
 .contact-us {
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .rbdr {
@@ -783,7 +780,7 @@ p {
 
 .rbdr form input,
 textarea {
-    width: 100% !important;
+    width: 80% !important;
     max-height: 60px;
     border: none;
     padding: 8px 8px 8px 8px;
@@ -794,6 +791,7 @@ textarea {
     font-weight: 500;
     background: #e7e7e7;
     border-radius: 8px;
+    margin-left: 46px !important;
 }
 
 .rbdr form textarea {
@@ -801,7 +799,7 @@ textarea {
 }
 
 .rbdr form select {
-    width: 100% !important;
+    width: 80% !important;
     max-height: 60px;
     border: none;
     padding: 8px 8px 8px 8px;
@@ -813,6 +811,7 @@ textarea {
     font-weight: 500;
     background: #e7e7e7;
     border-radius: 8px;
+    margin-left: 44px;
 }
 
 .form-sub {
@@ -906,10 +905,10 @@ textarea {
 }
 
 .map {
-    margin-top: 26px;
+    margin-top: 1px;
     overflow: hidden;
     border-radius: 10px;
-    height: 140px;
+    height: 330px;
 }
 
 
@@ -940,9 +939,9 @@ textarea {
     text-align: center;
 }
 
-.service-text p {
+.service-text {
     margin: 10px 0 0;
-    font-size: 17px;
+    font-size: 27px;
     font-weight: 600;
 }
 
@@ -968,9 +967,8 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    margin-top: 150px;
+    margin-top: 60px;
     border-top: 1px solid;
-    background: #004aff08;
 }
 
 .footers {
@@ -980,7 +978,7 @@ textarea {
 }
 
 .footer img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -991,7 +989,7 @@ textarea {
 }
 
 .column h3 {
-    color: #5e5e5e;
+    color: #e8e8e8;
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -1002,7 +1000,7 @@ textarea {
 
 .column p,
 .column a {
-    color: #000;
+    color: #bfc1c2;
     font-size: 16px;
     line-height: 1.5;
     text-decoration: none;
@@ -1013,7 +1011,7 @@ textarea {
 }
 
 .head-office p {
-    margin: 5px 0;
+    margin: 13px 0;
 }
 
 .head-office .highlight {
@@ -1030,7 +1028,6 @@ textarea {
     padding: 30px 0;
     margin-top: 35px;
     text-align: center;
-    background: #004aff08;
 }
 
 .Footer-span {
@@ -1039,11 +1036,12 @@ textarea {
 
 .footer-end p {
     margin: 0 0 10px;
+    color: #e8e8e8;
 }
 
 .footer-end a {
-    color: #135993;
-    text-decoration: none;
+    color: #fbfcfd;
+    text-decoration: underline;
     font-weight: 600;
 }
 
@@ -1056,7 +1054,7 @@ textarea {
     margin-top: 100px;
     justify-content: center;
     gap: 57px;
-    background: url(IMG/32947939_491362538070.jpg);
+    background: rgb(34, 35, 39);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1071,24 +1069,30 @@ textarea {
 }
 
 .training p {
-    font-size: 15px;
+    font-size: 17px;
     padding: 3px;
 }
 
-.training span {
-    margin-left: 10px;
-}
+
 
 .training .check-fa {
     font-size: 20px;
     line-height: 2;
-    background: white;
-    color: black;
+    background: rgb(34, 35, 39);
+    color: rgb(207, 207, 207);
 }
 
-#course {
-    margin-left: 29px;
+.check-fa i {
+    display: flex;
+    gap: 11px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    font-size: 20px;
+    background: rgb(34, 35, 39);
+    color: rgb(207, 207, 207);
 }
+
+
 
 
 
@@ -1117,10 +1121,63 @@ textarea {
 }
 
 .heading {
-    margin-top: 100px;
     text-align: center;
-    background: #000000c4;
-    color: white;
+    background: linear-gradient(rgb(0 0 0 / 93%), rgb(0 0 0 / 54%)), url('/img/heading-banner.avif');
+    background-size: cover;
+    background-position: center;
+        color: white;
     padding: 61px 0;
     font-family: emoji;
+}
+
+
+
+
+
+
+
+
+
+
+.topbar {
+    background-color: rgb(245 246 245);
+    position: relative;
+    padding: 10px 0;
+}
+
+
+.monitor {
+    background-color: #4f667c;
+    position: relative;
+    /* Important for absolute positioning */
+}
+
+.monitor p {
+    color: #e9ebea;
+}
+
+.top-shape::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 100%;
+    top: 0;
+    left: -17px;
+    background: #333941;
+    transform: skew(40deg);
+}
+
+#part1 {
+    padding: 6px 0 0px 51px;
+}
+
+.para {
+    justify-content: center;
+    align-items: center;
+}
+
+.div {
+    color: aliceblue;
+    overflow: auto;
+    background-repeat: repeat;
 }

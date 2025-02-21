@@ -1,13 +1,19 @@
-// Toggle the navbar visibility on mobile
-document.getElementById('navbar-toggle').addEventListener('click', function () {
-    const navbarItems = document.querySelector('.navbar-items');
-    navbarItems.classList.toggle('show');
+function toggleMenu() {
+    document.getElementById('nav-links').classList.toggle('active');
+}
+
+window.addEventListener("scroll", function () {
+    var navbar = document.getElementById("navbar");
+    var topbar = document.querySelector(".topbar");
+    
+    if (window.scrollY > topbar.offsetHeight) {
+        navbar.classList.add("fixed-nav");
+        document.body.style.paddingTop = navbar.offsetHeight + "px"; // Prevents content jump
+    } else {
+        navbar.classList.remove("fixed-nav");
+        document.body.style.paddingTop = "0";
+    }
 });
-
-
-
-
-
 
 
 
@@ -134,28 +140,4 @@ document.getElementById('nextImage').addEventListener('click', () => {
 
 
 
-    document.getElementById("contactForm").addEventListener("submit", async function (event) {
-        event.preventDefault(); // Default form submission ko roko
-
-        const formData = new FormData(event.target);
-        const formObject = Object.fromEntries(formData.entries());
-
-        try {
-            const response = await fetch("http://localhost:3000/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formObject),
-            });
-
-            if (response.ok) {
-                alert("Email sent successfully!");
-            } else {
-                alert("Failed to send email. Please try again.");
-            }
-        } catch (error) {
-            console.error("Error:", error);
-            alert("An error occurred. Please try again later.");
-        }
-    });
+   
