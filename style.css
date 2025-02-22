@@ -847,15 +847,6 @@ textarea {
     background: #fbfbfb;
 }
 
-/*.location::after {
-       content: "";
-       position: absolute;
-       width: 50%;
-       height: 100%;
-       left: 50%;
-       top: 0;
-       background: #333333;
-   }*/
 
 .contact-page-box {
     position: relative;
