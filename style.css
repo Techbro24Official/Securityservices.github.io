@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    transition: padding-top 2s ease-in;
+    transition: padding-top 2s ease-in-out;
 }
 
 html,
