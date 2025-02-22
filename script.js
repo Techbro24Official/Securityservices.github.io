@@ -3,7 +3,7 @@ function toggleMenu() {
 }
 
 window.addEventListener("scroll", function () {
-    var navbar = document.getElementById("navbar");
+    var navbar = document.getElementById("navbar-fixed");
     var topbar = document.querySelector(".topbar");
     
     if (window.scrollY > topbar.offsetHeight) {
