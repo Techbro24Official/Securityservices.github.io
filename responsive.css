@@ -25,12 +25,16 @@
     .miss-viss {
         flex-direction: column;
     }
+    .whatsapp-icon {
+        height: 40px;
+        width: 40px;
+    }
 }
 @media (max-width: 768px) {
  
 
     .logo {
-        margin-left: -27px;
+        margin-left: -20px;
         width: 147px;
     }
 
