@@ -11,6 +11,10 @@
         z-index: 100;
     }
 
+    .navbar {
+        height: 101px;
+        padding: 3px 0;
+    }
     .nav-links.active {
         display: flex;
     }
@@ -25,10 +29,25 @@
     .miss-viss {
         flex-direction: column;
     }
+   /* Medium Screens (Tablets) */
+@media (max-width: 768px) {
     .whatsapp-icon {
-        height: 40px;
-        width: 40px;
+      height: 35px;
+      width: 35px;
+      bottom: 15px;
+      right: 15px;
     }
+  }
+  
+  /* Small Screens (Mobile) */
+  @media (max-width: 480px) {
+    .whatsapp-icon {
+      height: 30px;
+      width: 30px;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
 }
 @media (max-width: 768px) {
  
@@ -201,7 +220,7 @@
     .column {
         padding: 10px 0;
         text-align: center;
-        margin-top: -20px;
+        margin-top: 0px;
     }
 }
 
