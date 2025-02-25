@@ -135,7 +135,7 @@
 @media (max-width: 768px) {
 
     .vip-security {
-        margin-top: 100px;
+        margin-top: 20px;
         flex-direction: column;
         margin-bottom: 50px;
     }
@@ -159,6 +159,7 @@
         flex-direction: column;
         margin-bottom: 50px;
         gap: 20px;
+        margin-top: 20px;
     }
 
     .bouncer p {
@@ -200,6 +201,7 @@
     .column {
         padding: 10px 0;
         text-align: center;
+        margin-top: -20px;
     }
 }
 
@@ -275,13 +277,14 @@
         font-size: 12px;
     }
 
-    .rbdr form input,
-    textarea {
-        width: 75% !important;
+    .rbdr form 
+    textarea,
+    input {
+        width: 80% !important;
     }
 
     .rbdr form select {
-        width: 75% !important;
+        width: 80% !important;
     }
 
     .name-mail {
@@ -301,6 +304,7 @@
 
     .clean {
         flex-direction: column;
+        margin-top: 20px;
     }
 
     .clean p {
@@ -309,6 +313,7 @@
 
     .container-security {
         flex-direction: column;
+        margin-top: 30px;
     }
     .footer img {
         display: block;
