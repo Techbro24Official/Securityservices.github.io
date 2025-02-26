@@ -419,8 +419,8 @@ button:hover {
 
 .about-us p {
     font-size: 18.9px;
-    line-height: 36px;
-    margin: 10px 0;
+    line-height: 1.6;
+    margin: 5px 0;
 }
 
 .container-cards {
@@ -621,6 +621,7 @@ button:hover {
 
 .bouncer img {
     width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -628,7 +629,7 @@ button:hover {
     font-weight: 600;
     font-size: 33px;
     font-family: sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
@@ -696,7 +697,7 @@ h1 {
 }
 
 .sidebar h2 {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -772,6 +773,7 @@ h1 {
     margin-bottom: 30px;
     margin-top: 30px;
     text-align: center;
+    padding: 0 10px;
 }
 
 .rbdr label {
@@ -954,7 +956,8 @@ textarea {
 
 .footer {
     width: 20%;
-    padding: 46px;
+    padding: 40px;
+    margin-left: -58px;
 }
 
 .container-footer {
